@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,21 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-eE-QT4">
-                                <rect key="frame" x="10" y="260" width="415" height="618"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-eE-QT4">
+                                <rect key="frame" x="10" y="258" width="424" height="640"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123 456 789" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3o-Xu-ikK">
-                                        <rect key="frame" x="0.0" y="0.0" width="415" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="424" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="69"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="S10-L7-NQf">
-                                        <rect key="frame" x="0.0" y="104" width="415" height="98"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S10-L7-NQf">
+                                        <rect key="frame" x="0.0" y="108" width="424" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-Sd-aLZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="O7g-Sd-aLZ" secondAttribute="height" id="7Vg-VR-M3n"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="C" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -43,9 +47,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8Ou-UK-V46">
-                                                <rect key="frame" x="104" y="0.0" width="103" height="98"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-UK-V46">
+                                                <rect key="frame" x="108" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8Ou-UK-V46" secondAttribute="height" id="Kfr-Iq-mfy"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="plus.forwardslash.minus" catalog="system" cornerStyle="capsule">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" weight="bold"/>
@@ -53,9 +59,11 @@
                                                     <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zzX-NJ-KXW">
-                                                <rect key="frame" x="208" y="0.0" width="103" height="98"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzX-NJ-KXW">
+                                                <rect key="frame" x="216" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zzX-NJ-KXW" secondAttribute="height" id="6O6-vy-oUG"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
                                                     <imageReference key="image" image="percent" catalog="system" variableValue="1"/>
@@ -64,9 +72,11 @@
                                                     <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="NwV-nj-Q3d">
-                                                <rect key="frame" x="312" y="0.0" width="103" height="98"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwV-nj-Q3d">
+                                                <rect key="frame" x="324" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="NwV-nj-Q3d" secondAttribute="height" id="px4-dg-hq6"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="divide" catalog="system" cornerStyle="capsule">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" weight="bold"/>
@@ -76,11 +86,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-Xm-h7A">
-                                        <rect key="frame" x="0.0" y="208" width="415" height="98"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-Xm-h7A">
+                                        <rect key="frame" x="0.0" y="216" width="424" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz4-JF-uoX">
-                                                <rect key="frame" x="0.0" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bz4-JF-uoX" secondAttribute="height" id="KNB-R0-fo1"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="7" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -94,7 +107,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-Rd-bTs">
-                                                <rect key="frame" x="104" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="108" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2bP-Rd-bTs" secondAttribute="height" id="kFe-V6-hCz"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="8" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -103,7 +119,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWg-pM-xdC">
-                                                <rect key="frame" x="208" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="216" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SWg-pM-xdC" secondAttribute="height" id="O6a-g4-9hA"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="9" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -112,7 +131,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvo-Go-gJc">
-                                                <rect key="frame" x="312" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="324" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Hvo-Go-gJc" secondAttribute="height" id="vUe-gr-wx3"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="multiply" catalog="system" cornerStyle="capsule">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" weight="bold"/>
@@ -122,11 +144,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-wr-swh">
-                                        <rect key="frame" x="0.0" y="312" width="415" height="98"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-wr-swh">
+                                        <rect key="frame" x="0.0" y="324" width="424" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMp-iD-eo1">
-                                                <rect key="frame" x="0.0" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zMp-iD-eo1" secondAttribute="height" id="NTG-3K-xa1"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="4" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -140,7 +165,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-7a-OaH">
-                                                <rect key="frame" x="104" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="108" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="R1Z-7a-OaH" secondAttribute="height" id="rFW-gv-NGZ"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="5" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -149,7 +177,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-gy-mgG">
-                                                <rect key="frame" x="208" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="216" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LYa-gy-mgG" secondAttribute="height" id="fAS-pB-sF9"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="6" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -158,7 +189,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-6Q-Knp">
-                                                <rect key="frame" x="312" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="324" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4v7-6Q-Knp" secondAttribute="height" id="Ih6-Ri-AYP"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system" cornerStyle="capsule">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" weight="bold"/>
@@ -168,11 +202,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-lC-zGH">
-                                        <rect key="frame" x="0.0" y="416" width="415" height="98"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-lC-zGH">
+                                        <rect key="frame" x="0.0" y="432" width="424" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8g-Y7-42a">
-                                                <rect key="frame" x="0.0" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="a8g-Y7-42a" secondAttribute="height" id="H7n-8B-DNm"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="1" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -186,7 +223,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-Li-nhD">
-                                                <rect key="frame" x="104" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="108" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Jrz-Li-nhD" secondAttribute="height" id="eIA-G9-lMf"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="2" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -195,7 +235,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmH-xJ-mgZ">
-                                                <rect key="frame" x="208" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="216" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WmH-xJ-mgZ" secondAttribute="height" id="5TX-Sx-ZNL"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="3" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -204,7 +247,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxQ-Wx-mwb">
-                                                <rect key="frame" x="312" y="0.0" width="103" height="98"/>
+                                                <rect key="frame" x="324" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xxQ-Wx-mwb" secondAttribute="height" id="RsB-fZ-htO"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" cornerStyle="capsule">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" weight="bold"/>
@@ -214,11 +260,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-a6-kwX">
-                                        <rect key="frame" x="0.0" y="520" width="415" height="98"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="407.33333333333331" placeholderIntrinsicHeight="100" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-a6-kwX">
+                                        <rect key="frame" x="0.0" y="540" width="424" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="180" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHv-aq-Wa5">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SHv-aq-Wa5" secondAttribute="height" multiplier="2.1:1" id="vpT-np-Rtj"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -232,7 +281,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkM-Eo-BFO">
-                                                <rect key="frame" x="138.66666666666669" y="0.0" width="137.66666666666669" height="98"/>
+                                                <rect key="frame" x="218" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VkM-Eo-BFO" secondAttribute="height" id="vWZ-qB-sVM"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="33"/>
@@ -241,7 +293,10 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHF-bz-yRJ">
-                                                <rect key="frame" x="277.33333333333331" y="0.0" width="137.66666666666669" height="98"/>
+                                                <rect key="frame" x="326" y="0.0" width="98" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CHF-bz-yRJ" secondAttribute="height" id="vVI-ap-HH4"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="equal" catalog="system" cornerStyle="capsule">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" weight="bold"/>
@@ -250,12 +305,23 @@
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="CHF-bz-yRJ" secondAttribute="trailing" id="6QB-7s-cqx"/>
+                                            <constraint firstItem="CHF-bz-yRJ" firstAttribute="leading" secondItem="VkM-Eo-BFO" secondAttribute="trailing" constant="8" id="tNH-oi-hHZ"/>
+                                            <constraint firstItem="VkM-Eo-BFO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SHv-aq-Wa5" secondAttribute="trailing" constant="10.5" id="tqU-9z-TiU"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cg9-eE-QT4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7lb-Yl-bsP"/>
+                            <constraint firstItem="cg9-eE-QT4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="C73-4L-j6a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cg9-eE-QT4" secondAttribute="trailing" constant="10" id="TQ1-Qf-ll8"/>
+                            <constraint firstItem="cg9-eE-QT4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mO0-0p-43I"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
